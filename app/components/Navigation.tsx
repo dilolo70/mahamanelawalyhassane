@@ -20,10 +20,10 @@ const links = [
     path: "/blog",
     title: "Blog",
   },
-  // {
-  //   path: "/gear",
-  //   title: "Outils",
-  // },
+  {
+    path: "/projet",
+    title: "Projets",
+  },
 ] as const;
 
 export default function Navigation() {
