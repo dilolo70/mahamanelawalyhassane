@@ -33,7 +33,7 @@ export default async function About() {
           className="animate-in text-secondary"
           style={{ "--index": 1 } as React.CSSProperties}
         >
-          Un aperçu de moi.
+          Un aperçu de moi meme  .
         </p>
       </div>
       <div className="mb-8 md:hidden">
