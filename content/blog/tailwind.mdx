@@ -1,0 +1,72 @@
+---
+title: "Tailwind avant tout. Reproduire l'interface de l'application météo iOS"
+date: "2023-03-05"
+summary: "Voici pourquoi j'utiliserai Tailwind CSS pour presque tous mes projets à l'avenir."
+tags: ["Stylisation", "CSS"]
+---
+
+Tailwind CSS est un framework CSS utilitaire-first qui a fait des vagues dans le monde du développement web. Il est rapidement devenu un choix incontournable pour les développeurs souhaitant rationaliser leur flux de travail CSS et créer des sites plus rapidement. Si vous ne connaissez pas encore Tailwind, vous vous demandez peut-être ce qui provoque tant d'engouement.
+
+Dans cet article, nous explorerons les principaux avantages de l'utilisation de [Tailwind CSS](https://tailwindcss.com), ainsi que quelques inconvénients des approches plus traditionnelles du développement CSS. À la fin de ce post, vous aurez une meilleure compréhension de la façon dont Tailwind peut rendre votre processus de développement plus efficace et pourquoi il devient rapidement un outil indispensable pour les développeurs de tous niveaux.
+
+## Parlons de l'UX des développeurs
+
+En design, il y a l'interface utilisateur, l'expérience utilisateur, et l'interface humaine (comme Apple l'appelle), mais n'oublions pas l'**expérience développeur**. Tailwind est un excellent exemple d'un outil qui améliore l'expérience des développeurs.
+
+Travailler avec des fichiers CSS inutilisés peut être une expérience frustrante pour les développeurs. Lorsqu'un fichier CSS contient des styles qui ne sont plus utilisés dans le projet, il devient difficile de trouver et de mettre à jour les styles nécessaires à long terme. Voici quelques points clés à considérer :
+
+- Moins de temps passé à réfléchir à des noms farfelus <sup>1</sup>
+
+- Réduire la taille de vos fichiers CSS <sup>2</sup>
+
+- Modifier les styles déjà existants devient plus sûr <sup>3</sup>
+
+<div className="text-tertiary text-sm mt-8">
+1 - Tailwind vous aide à gagner du temps en éliminant le besoin de créer des noms de classes uniques pour chaque élément de votre interface. Vous n'avez plus à lutter pour trouver des noms abstraits ou inutiles comme "sidebar-inner-wrapper" ou "content-container".
+
+2 - Cela facilite la gestion et la maintenance. Contrairement au CSS traditionnel, où vous devez créer de nouvelles feuilles de style pour chaque nouvelle fonctionnalité, les classes utilitaires de Tailwind peuvent être facilement réutilisées tout au long de votre projet, réduisant ainsi considérablement la nécessité d'écrire de nouveau du code CSS.
+
+3 - Parce que les classes sont locales aux éléments HTML. Avec le CSS global, tout changement que vous effectuez peut avoir des conséquences imprévues ailleurs dans votre projet, mais avec Tailwind, vous pouvez effectuer des modifications en toute confiance, sachant que vous ne casserez rien accidentellement.
+</div>
+
+## Un avenir prometteur
+
+Heureusement, de plus en plus d'outils privilégient l'expérience développeur. C'est un énorme plus pour nous, développeurs, qui voulons nous concentrer sur la création de fonctionnalités plutôt que de passer des heures à essayer de styliser un composant.
+
+## Rapidité et efficacité
+
+Regardez ce widget météo iOS. J'ai pu créer ce composant en moins de 5 minutes, ce qui m'aurait pris beaucoup plus de temps si j'avais dû écrire le CSS et passer d'un fichier à l'autre.
+
+<Weather />
+
+L'un des plus grands avantages de l'utilisation de Tailwind CSS est sa capacité à accélérer le processus de développement. En utilisant des classes utilitaires, Tailwind permet aux développeurs de créer et de styliser rapidement des composants sans avoir à écrire du CSS personnalisé. Je sais ce que vous pensez - les classes utilitaires ne sont-elles qu'une façon élégante de dire "styles en ligne" ? Bien que cela soit vrai, les classes utilitaires de Tailwind sont beaucoup plus puissantes que les styles en ligne.
+
+De plus, Tailwind propose des pseudo-classes intégrées comme `hover`, `focus` et `active` (utilisées ci-dessus), qui peuvent être utilisées pour créer des composants plus complexes, sans quitter vos fichiers TS ou JS.
+
+## La puissance des composants réutilisables
+
+L'un des principaux avantages de Tailwind CSS est la promotion des composants réutilisables, qui est désormais un standard dans le monde du front-end. En utilisant des classes prédéfinies, Tailwind permet aux développeurs de créer des composants réutilisables qui peuvent être facilement utilisés dans tout le code.
+
+```tsx showLineNumbers
+const WeatherList = () => {
+  return (
+    <div className="my-8 flex flex-col gap-2">
+      {data.map((item, index) => (
+        <CityCard key={index} data={item} />
+      ))}
+    </div>
+  );
+};
+ 
+
+const WeatherList = () => {
+  return (
+    <div className="my-8 flex flex-col gap-2">
+      {data.map((item, index) => (
+        <CityCard key={index} data={item} />
+      ))}
+    </div>
+  );
+};
+```
+
