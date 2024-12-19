@@ -48,7 +48,6 @@ export default function Home() {
             Tiktok
             <ArrowUpRightIcon className="h-4 w-4 text-tertiary" />
 
-
           </Link>
 
           <Link
@@ -65,7 +64,7 @@ export default function Home() {
         className="flex animate-in flex-col gap-8"
         style={{ "--index": 4 } as React.CSSProperties}
       >
-        <p className="tracking-tight text-secondary">Épinglé</p>
+        {/* <p className="tracking-tight text-secondary">Épinglé</p> */}
         {/* <ProjectList projects={projects} /> */}
       </div>
 
