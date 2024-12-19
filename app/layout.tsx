@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "Developpeur passionné par les technologies web et les applications mobiles.",
   openGraph: {
     title: "Mahamane Lawaly hassane",
-    url: "",
+    url: "https://m-l-h.netlify.app/",
     images: [{ url: "", alt: "" }],
   },
 };

@@ -19,7 +19,7 @@ import Greeting from "./components/Greeting";
 
 export const metadata: Metadata = {
   title: "À propos | Mahamane Lawaly Hassane",
-  description: "",
+  description: "Ma page de description",
 };
 
 export default async function About() {

@@ -20,8 +20,8 @@ const Custom404 = (): JSX.Element => {
 
   return (
     <div className="flex flex-col gap-2">
-      <h1 className="text-3xl font-bold tracking-tight text-primary">404</h1>
-      <p className="text-secondary max-w-sm">
+      <h1 className="text-3xl font-bold tracking-tight text-primary">Page introuvable – 404!</h1>
+      <p className="text-secondary max-w-sm  text-center">
         Ooh , cette page n&apos;existe pas , peut-être que vous avez cliqué sur une ancienne page ou que vous avez mal orthographié. Veuillez réessayer…
       </p>
       <div className="h-2" />
@@ -41,7 +41,7 @@ const Custom404 = (): JSX.Element => {
 <style jsx>{`
   .dialogue-animation {
     opacity: 0;
-    animation: fadeIn 0.5s forwards;
+    animation: fadeIn 5s ease-in-out forwards;
   }
 
   @keyframes fadeIn {
