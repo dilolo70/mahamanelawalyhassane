@@ -19,12 +19,10 @@ import Greeting from "./components/Greeting";
 
 export const metadata: Metadata = {
   title: "À propos | Mahamane Lawaly Hassane",
-  description:
-    "",
+  description: "",
 };
 
 export default async function About() {
- 
   return (
     <div className="flex flex-col gap-16 md:gap-24">
       <div>
@@ -143,7 +141,6 @@ export default async function About() {
 }
 
 const workplaces = [
- 
   {
     title: "Stage ",
     company: "Université de Maradi",
