@@ -30,7 +30,7 @@ export default function BlogPage() {
             className="animate-in text-secondary"
             style={{ "--index": 1 } as React.CSSProperties}
           >
-            {blogs.length} articles pour l'instant. Restez à l'écoute pour en savoir plus !
+            {blogs.length} articles pour l&apos;instant. Restez à l&apos;écoute pour en savoir plus !
           </p>
         </div>
       </div>
