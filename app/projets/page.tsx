@@ -1,5 +1,5 @@
-
-
+import  Projet  from "@/app/projets/components/projet";
+import HoverMenu from "../components/cardtri";
 export default function Projets() {
   return (
     <div className="flex flex-col gap-16 md:gap-24">      
@@ -8,15 +8,16 @@ export default function Projets() {
           <h1 className="animate-in text-3xl font-semibold tracking-tight text-primary">
             Projets
           </h1>
-          <p
+          <div
             className="max-w-lg animate-in text-secondary"
             style={{ "--index": 1 } as React.CSSProperties}
           >
             Je me spécialise dans Flutter, le développement mobile, React, le développement Web, l&apos;UI/UX et la conception de produits. Mais j&apos;apprends toujours de nouvelles choses.
             Voici quelques projets personnels :
             <br />
-            
-          </p>
+            <Projet />
+
+          </div>
         </div>
       </div>
 

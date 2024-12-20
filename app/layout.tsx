@@ -5,6 +5,7 @@ import { GeistMono } from "geist/font/mono";
 
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 import Navigation from "@/app/components/Navigation";
+import HoverMenu from "./components/cardtri";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://example.com"),
@@ -27,7 +28,11 @@ export default function RootLayout({
       <html lang="fr" className={`${GeistSans.variable} ${GeistMono.variable}`}>
         <body className="width-full bg-contrast text-primary antialiased">
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <Navigation />
+            {/* <Navigation /> */}
+           
+  
+<HoverMenu />
+           
             <div className="mx-auto max-w-[700px] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
               {children}
             </div>
